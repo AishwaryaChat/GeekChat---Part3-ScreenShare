@@ -30,12 +30,16 @@ login.onclick = e => {
 
 startShareButton.onclick = () => {
   videoArea.style.display = 'block'
-  navigator.getUserMedia(contraints,
-    stream => {
-      console.log('streammmmmmmmmmm', stream)
-      remoteScreen.src = window.URL.createObject(stream)
-    },
-  error => console.log('errorrrrr', error))
+  // navigator.getUserMedia(contraints,
+  //   stream => {
+  //     console.log('streammmmmmmmmmm', stream)
+  //     remoteScreen.src = window.URL.createObject(stream)
+  //   },
+  // error => console.log('errorrrrr', error))
+  const screen = new Screen()
+  screen.onaddstream = e => {
+    console.log('eeeeeeeeeeeee', e.video)
+  }
 }
 
 socket.on('get users', users => {
