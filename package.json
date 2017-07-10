@@ -19,6 +19,9 @@
   "homepage": "https://github.com/AishwaryaChat/GeekChat---Part3-ScreenShare#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "socket.io": "^2.0.3"
+    "multirtc": "^7.0.2",
+    "node-static": "^0.7.9",
+    "socket.io": "^2.0.3",
+    "websocket": "^1.0.24"
   }
 }
